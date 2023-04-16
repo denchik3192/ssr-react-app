@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import MainContainer from '../components/MainContainer';
 
 const Users = ({ users }) => {
   //   const [users, setUsers] = useState([
@@ -18,12 +19,14 @@ const Users = ({ users }) => {
   //   }, []);
   return (
     <>
-      <h1>Users page</h1>
-      {users.map((user) => (
-        <li key={user.id}>
-          <Link href={`/users/${user.id}`}>{user.name}</Link>
-        </li>
-      ))}
+      <MainContainer keywords={'users page'}>
+        <h1>Users page</h1>
+        {users.map((user) => (
+          <li key={user.id}>
+            <Link href={`/users/${user.id}`}>{user.name}</Link>
+          </li>
+        ))}
+      </MainContainer>
     </>
   );
 };
