@@ -2,21 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import MainContainer from '../components/MainContainer';
 
-const Users = ({ users }) => {
-  //   const [users, setUsers] = useState([
-  //     { id: 1, name: 'den' },
-  //     { id: 2, name: 'kirill' },
-  //     { id: 3, name: 'john' },
-  //   ]);
-
-  //   useEffect(() => {
-  //     async function fetchData() {
-  //       const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
-  //       const data = await response.json();
-  //       setUsers(data);
-  //     }
-  //     fetchData();
-  //   }, []);
+const Work = ({ users }) => {
   return (
     <>
       <MainContainer keywords={'users page'}>
@@ -30,7 +16,7 @@ const Users = ({ users }) => {
     </>
   );
 };
-export default Users;
+export default Work;
 export async function getStaticProps(context) {
   const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
   const users = await response.json();

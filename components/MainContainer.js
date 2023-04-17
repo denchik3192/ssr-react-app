@@ -1,8 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 
 const MainContainer = ({ children, keywords }) => {
+  const router = useRouter();
+  const links = [
+    { id: 0, name: 'About', link: '/' },
+    { id: 1, name: 'Work', link: '/work' },
+    { id: 2, name: 'Contacts', link: '/contacts' },
+  ];
+
   return (
     <>
       <Head>
@@ -11,15 +19,19 @@ const MainContainer = ({ children, keywords }) => {
       </Head>
       <header>
         <nav className="nav">
-          <Link className="link" href="/">
-            Main
-          </Link>
-          <Link className="link" href="/users">
-            Users
-          </Link>
+          <div className="container">
+            {links.map(({ id, link, name }) => (
+              <Link
+                key={id}
+                className={`link ${router.pathname === link ? 'active' : ''}`}
+                href={link}>
+                {name}
+              </Link>
+            ))}
+          </div>
         </nav>
       </header>
-      <div>{children}</div>
+      <div className="container">{children}</div>
     </>
   );
 };
