@@ -1,3 +1,4 @@
+import { Instagram, LinkedIn, Telegram, YouTube } from '@mui/icons-material';
 import MainContainer from '../components/MainContainer';
 import s from '../styles/index.module.scss';
 
@@ -8,7 +9,28 @@ const Index = () => {
         <h1 className={s.mainTitle}>
           Frontend <br></br>Developer.
         </h1>
-        <p>desssssssssssssssssssssssssssssssssssssssss </p>
+
+        {/* <p style={{ background: 'black' }}>
+          {' '}
+          React * Redux * Redux Tollkit * Typescript * Next.JS *
+        </p> */}
+
+        <p className={s.description}>Hi, I develop websites & single page aplications.</p>
+      </div>
+      {/* <div className={s.spiner}></div> */}
+      <div className={s.social}>
+        <a href="https://t.me/denchik3192">
+          <Telegram />
+        </a>
+        <a href="https://www.linkedin.com/in/denis-slabodchikov-775bb620b/">
+          <LinkedIn />
+        </a>
+        <a href="">
+          <Instagram />
+        </a>
+        <a href="">
+          <YouTube />
+        </a>
       </div>
     </MainContainer>
   );

@@ -1,3 +1,4 @@
+import { Instagram, LinkedIn, Mail, Phone, Telegram, YouTube } from '@mui/icons-material';
 import MainContainer from '../components/MainContainer';
 import s from '../styles/contacts.module.scss';
 
@@ -9,9 +10,15 @@ const Contacts = () => {
   ];
   return (
     <MainContainer keywords={'contact page'}>
-      {/* <div className={s.contactWrapper}>
-        <h1>Contact page</h1>
-      </div> */}
+      <div>
+        <Instagram />
+      </div>
+
+      <LinkedIn />
+      <YouTube />
+      <Mail />
+      <Telegram />
+      <Phone />
     </MainContainer>
   );
 };

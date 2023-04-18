@@ -1,3 +1,11 @@
+import {
+  Instagram,
+  LinkedIn,
+  Mail,
+  SixKPlusOutlined,
+  Telegram,
+  YouTube,
+} from '@mui/icons-material';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -7,6 +15,7 @@ const MainContainer = ({ children, keywords }) => {
   const router = useRouter();
   const links = [
     { id: 0, name: 'About', link: '/' },
+    { id: 1, name: 'Portfolio', link: '/portfolio' },
     { id: 1, name: 'Work', link: '/work' },
     { id: 2, name: 'Contacts', link: '/contacts' },
   ];
@@ -20,14 +29,24 @@ const MainContainer = ({ children, keywords }) => {
       <header>
         <nav className="nav">
           <div className="container">
-            {links.map(({ id, link, name }) => (
-              <Link
-                key={id}
-                className={`link ${router.pathname === link ? 'active' : ''}`}
-                href={link}>
-                {name}
-              </Link>
-            ))}
+            <div>
+              {links.map(({ id, link, name }) => (
+                <Link
+                  key={id}
+                  className={`link ${router.pathname === link ? 'active' : ''}`}
+                  href={link}>
+                  {name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="social">
+              {/* <Telegram />
+              <LinkedIn />
+              <Instagram />
+              <Mail />
+              <YouTube /> */}
+            </div>
           </div>
         </nav>
       </header>

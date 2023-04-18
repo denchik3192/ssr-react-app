@@ -29,10 +29,22 @@ body {
     border-image: linear-gradient(0.25turn, $font, $background);
     border-image-slice: 1;
     width:100%;
+    svg {
+        display: inline-block;
+        margin-right: 10px;
+        
+        &:hover{
+            cursor: pointer;
+            fill: #78ffd6;
+        }
+        
+    }
+    
     
     .container {
         height: 100%;
         align-items: center;
+        justify-content: space-between;
         
         .link{
             position: relative;
@@ -47,12 +59,12 @@ body {
             &:hover {
                 color: $font-active;
                 transition: 0.2s ease-in-out;
-
-                
             }
         }
       }
     }
+
+    
     
     
   
