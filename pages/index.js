@@ -10,11 +10,6 @@ const Index = () => {
           Frontend <br></br>Developer.
         </h1>
 
-        {/* <p style={{ background: 'black' }}>
-          {' '}
-          React * Redux * Redux Tollkit * Typescript * Next.JS *
-        </p> */}
-
         <p className={s.description}>Hi, I develop websites & single page aplications.</p>
       </div>
       {/* <div className={s.spiner}></div> */}
@@ -25,7 +20,7 @@ const Index = () => {
         <a href="https://www.linkedin.com/in/denis-slabodchikov-775bb620b/">
           <LinkedIn />
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/denchy92/">
           <Instagram />
         </a>
         <a href="">
