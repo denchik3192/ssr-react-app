@@ -1,0 +1,28 @@
+@import './varables';
+.section {
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    background: rgb(35, 35, 35);
+    h2{
+        width: 140px;
+        background-image: linear-gradient(90deg,
+        #a8ff78,
+        #78ffd6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    }
+    ul{
+        margin-left: 20px;
+        list-style: none;
+        ::before {
+            content: '';
+            padding-left: 20px;
+            border-left: 1px solid $font;
+        }
+    }
+}

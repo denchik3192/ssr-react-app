@@ -1,12 +1,13 @@
 import React from 'react';
 import MainContainer from '../components/MainContainer';
+import s from '../styles/portfolio.module.scss';
 
 const Portfolio = () => {
   return (
     <MainContainer>
-      <div>
-        <section>
-          <h2>Skills</h2>
+      <div style={{ width: '100%', marginTop: '20px' }}>
+        <section className={s.section}>
+          <h2>Skills:</h2>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -20,24 +21,28 @@ const Portfolio = () => {
             <li>Oracle</li>
           </ul>
         </section>
-        <section>
-          <h2>Education</h2>
+        <section className={s.section}>
+          <h2>Education:</h2>
           <ul>
             <li>
-              Belarusian Russian University. Qualification - information technologies engineer.{' '}
+              Belarusian Russian University. Qualification - Information technologies engineer.{' '}
             </li>
-            <li> RS School </li>
+            <li>The Rolling Scopes School - JavaScript/Front-end</li>
           </ul>
         </section>
-        <section>
-          <h2>English</h2>
-          <li> B1: Adaptive English test</li>
+        <section className={s.section}>
+          <h2>English:</h2>
+          <ul>
+            <li> B1: Adaptive English test</li>
+          </ul>
         </section>
-        <section>
-          <h2>Hobby</h2>
-          <li> Guitar</li>
-          <li> Trips</li>
-          <li> GYM</li>
+        <section className={s.section}>
+          <h2>Hobbies:</h2>
+          <ul>
+            <li> Guitar</li>
+            <li> Trips</li>
+            <li> GYM</li>
+          </ul>
         </section>
       </div>
     </MainContainer>

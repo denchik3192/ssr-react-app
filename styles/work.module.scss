@@ -1,0 +1,99 @@
+.projects {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+
+    .project {
+        .projectImage {
+            img {
+                width: 100%;
+                height: 150px;
+            }
+            // position: absolute;
+            // background-image: url('../assets/momentum.png');
+            // -webkit-background-size: cover;
+            // -moz-background-size: cover;
+            // -o-background-size: cover;
+            // background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px;
+        width: 280px;
+        height: 300px;
+        background: rgb(35, 35, 35);
+        cursor: pointer;
+        border-radius: 4px;
+
+        .description {
+            // visibility: hidden;
+            width: 100%;
+            opacity: 0.3;
+            transition: 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                padding: 5px;
+                width: 100%;
+                height: 50px;
+                border-radius: 4px;
+                background: #51515195;
+
+            }
+            h3 {
+                margin-top: 10px;
+            }
+        }
+
+        &:hover {
+            transform: translateZ(10px);
+
+            .description {
+                opacity: 1;
+                visibility: visible;
+                
+                transition: 0.2s ease-in;
+
+                h3 {
+                    background-image: linear-gradient(90deg,
+                            #a8ff78,
+                            #78ffd6);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    svg {
+                        fill: #a8ff78;
+
+                    }
+                }
+
+                p {
+
+                    transition: 0.5s ease-in;
+                    align-self: flex-end;
+                }
+
+            }
+        }
+    }
+}

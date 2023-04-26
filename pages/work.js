@@ -1,43 +1,55 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MainContainer from '../components/MainContainer';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import pizzaImg from '../assets/pizza.png';
+import momentumImg from '../assets/momentum.png';
+import museumImg from '../assets/museum.png';
+import s from '../styles/work.module.scss';
+import { LinkRounded } from '@mui/icons-material';
+import Image from 'next/image';
 
 const Work = ({ users }) => {
   return (
     <>
       <MainContainer keywords={'users page'}>
-        {/* <h1>Users page</h1>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link href={`/users/${user.id}`}>{user.name}</Link>
-          </li>
-        ))} */}
-        e
-        <Swiper
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}>
-          <SwiperSlide style={{ background: 'white', height: '500px' }}>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-        </Swiper>
+        <div className={s.projects}>
+          <div className={s.project}>
+            <div className={s.projectImage}>
+              <Image src={momentumImg} />
+            </div>
+            <div className={s.description}>
+              <a href="https://silver-lebkuchen-e87765.netlify.app">
+                <h3 className={s.title}>Momentum</h3>
+                <LinkRounded></LinkRounded>
+              </a>
+              <p className={s.techs}>react/redux Toolkit/scss/context</p>
+            </div>
+          </div>
+          <div className={s.project}>
+            <div className={s.projectImage}>
+              <Image src={pizzaImg} />
+            </div>
+            <div className={s.description}>
+              <a href="https://jovial-cocada-acafde.netlify.app/?categoryId=0&sortProperty=rating&currentPage=1">
+                <h3 className={s.title}>React-pizza</h3>
+                <LinkRounded></LinkRounded>
+              </a>
+              <p className={s.techs}>react/redux Toolkit/scss/context</p>
+            </div>
+          </div>
+          <div className={s.project}>
+            <div className={s.projectImage}>
+              <Image src={museumImg} />
+            </div>
+            <div className={s.description}>
+              <a href="https://rolling-scopes-school.github.io/denchik3192-JSFE2021Q3/museum/">
+                <h3 className={s.title}>Museum</h3>
+                <LinkRounded></LinkRounded>
+              </a>
+              <p className={s.techs}>html/css/js</p>
+            </div>
+          </div>
+        </div>
       </MainContainer>
     </>
   );
