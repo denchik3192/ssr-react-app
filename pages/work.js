@@ -34,7 +34,9 @@ const Work = ({ users }) => {
                 <h3 className={s.title}>React-pizza</h3>
                 <LinkRounded></LinkRounded>
               </a>
-              <p className={s.techs}>react/redux Toolkit/scss/context</p>
+              <p className={s.techs}>
+                react/redux/Toolkit/<br></br>typescript/scss/context
+              </p>
             </div>
           </div>
           <div className={s.project}>

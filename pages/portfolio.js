@@ -37,6 +37,13 @@ const Portfolio = () => {
           </ul>
         </section>
         <section className={s.section}>
+          <h2>Work:</h2>
+          <ul>
+            <li> Relay protection (2012-2019)</li>
+            <li> Automated control system engineer (2019-current)</li>
+          </ul>
+        </section>
+        <section className={s.section}>
           <h2>Hobbies:</h2>
           <ul>
             <li> Guitar</li>

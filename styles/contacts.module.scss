@@ -1,11 +1,14 @@
 .contactContainer{
     margin-top: 40px;
+    padding: 20px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    border-radius: 4px;
     justify-content: space-between;
     flex-direction: column;
+    
     .contact {
+        margin-left: 100px;
         a{
             text-decoration: none;
             padding: 5px 10px 5px 10px;
